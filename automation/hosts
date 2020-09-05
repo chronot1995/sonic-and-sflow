@@ -4,10 +4,7 @@
 #    using topology data
 
 [servers]
-server01 ansible_host=192.168.200.17
-server02 ansible_host=192.168.200.18
-server04 ansible_host=192.168.200.20
-server05 ansible_host=192.168.200.21
+oob-mgmt-server ansible_host=192.168.200.11
 
 [all:vars]
 ansible_user=cumulus
