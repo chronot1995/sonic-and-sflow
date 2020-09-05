@@ -1,0 +1,27 @@
+- name: Verify Minimum Software Version - Ubuntu 18.04
+  assert:
+    that: "{{ansible_lsb.release is version_compare('18.04', '>=') }}"
+    msg: >
+      "Ubuntu must be version 18.04.
+      Version {{ansible_lsb.release}} detected"
+
+- name: Verify Minimum RAM on the server
+  assert:
+    that: "{{ ansible_memtotal_mb >= 2000 }}"
+    msg: >
+      "This server needs 2Gb of RAM or more, only {{ansible_memtotal_mb}} detected"
+
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+
+- name: Install Docker Packages
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - docker.io
+    - docker-compose
+
+- name: Flush Handlers, best practice
+  meta: flush_handlers
