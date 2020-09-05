@@ -2,8 +2,3 @@
   become: true
   roles:
   - servers
-
-- hosts: server01
-  become: true
-  roles:
-  - k8sserver
