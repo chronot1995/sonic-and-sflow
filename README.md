@@ -2,6 +2,10 @@
 
 ## WORK IN PROGRESS ##
 
+Internal link:
+
+https://confluence.nvidia.com/display/NetworkingBU/Sonic+and+sFlow+Integration
+
 ### Description:
 
 These are the steps to setup sFlow on Sonic using a docker container with the sFlow collector, Prometheus, and Grafana, on the OOB Management Server (oob-mgmt-server)
