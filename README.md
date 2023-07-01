@@ -30,12 +30,12 @@ Run the ansible playbook:
 sudo docker-compose up -d
 ```
 Within Air, create a new service to point to the Grafana port:
-
+```
 Service Name: Grafana
 Interface: oob-mgmt-server:eth0
 Service Type: http
 Service Port: 3000
-
+```
 Click the "Submit" button and wait anywhere from 5-10 minutes.
 
 To stop the demo:
@@ -62,18 +62,10 @@ sudo config sflow disable
 ```
 Good to know:
 
-sflow project:
+[sflow project](https://blog.sflow.com/2020/02/sonic.html)
 
-https://blog.sflow.com/2020/02/sonic.html
+[Container - sflow / prometheus exporter](https://hub.docker.com/r/sflow/prometheus)
 
-Container - sflow / prometheus exporter:
+[Container - Prometheus](https://hub.docker.com/r/prom/prometheus)
 
-https://hub.docker.com/r/sflow/prometheus
-
-Container - Prometheus:
-
-https://hub.docker.com/r/prom/prometheus
-
-Container - Grafana:
-
-https://hub.docker.com/r/grafana/grafana
+[Container - Grafana](https://hub.docker.com/r/grafana/grafana)
